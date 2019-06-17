@@ -126,7 +126,7 @@ def imagesc(data, Lateral=None, Depth=None, clim=None, title_str=None, xlabel='N
 
         if colorbar_label is not None:
             clb.ax.set_title(colorbar_label)
-    else
+    else:
         im1 = ax.imshow(data, clim=clim, extent=[Lateral[0], Lateral[-1], Depth[-1], Depth[0]], interpolation='nearest', aspect='auto')
         if title_str is not None:
             ax.set_title(title_str)
