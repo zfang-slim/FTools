@@ -137,6 +137,7 @@ def imagesc(data, Lateral=None, Depth=None, clim=None, title_str=None, xlabel='N
         clb=plt.colorbar(im1, ax=ax)    
         if colorbar_label is not None:
             clb.ax.set_title(colorbar_label)
+            
 
     return im1
 
