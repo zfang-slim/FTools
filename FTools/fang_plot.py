@@ -19,7 +19,7 @@ import sys
 
 
 
-__all__ = ['getImageFromList', 'create_animation', 'plot_model', 'plot_data']
+__all__ = ['getImageFromList', 'create_animation', 'plot_model', 'plot_data', 'imagesc']
 
 __docformat__ = "restructuredtext en"
 
@@ -137,7 +137,7 @@ def imagesc(data, Lateral=None, Depth=None, clim=None, title_str=None, xlabel='N
         clb=plt.colorbar(im1, ax=ax)    
         if colorbar_label is not None:
             clb.ax.set_title(colorbar_label)
-            
+
 
     return im1
 
