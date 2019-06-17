@@ -1,0 +1,8 @@
+README.md
+setup.py
+FTools/__init__.py
+FTools/compute_IC.py
+FTools.egg-info/PKG-INFO
+FTools.egg-info/SOURCES.txt
+FTools.egg-info/dependency_links.txt
+FTools.egg-info/top_level.txt

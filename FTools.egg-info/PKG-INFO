@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: FTools
+Version: 0.0.1
+Summary: Tool box for Fang Zhilong personal usage
+Home-page: https://github.com/zfang-slim/FTools.git
+Author: Zhilong Fang
+Author-email: fangzl@mit.edu
+License: UNKNOWN
+Description: This repo contains several tools that Zhilong personal uses.
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
