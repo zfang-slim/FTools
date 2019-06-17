@@ -111,6 +111,28 @@ def plot_model(fig, ax, data, Lateral, Depth, model_size, clim=None, title_str=N
         cbar.set_label(colorbar_label)
 
     return im1
+
+def imagesc(data, Lateral=None, Depth=None, clim=None, title_str=None, xlabel='None', ylabel='None',
+            cmap='jet', colorbar_label=None):
+    im1 = plt.imshow(data, clim=clim, extent=[Lateral[0], Lateral[-1], Depth[-1], Depth[0]], interpolation='nearest', aspect='auto')
+    if title_str is not None:
+        plt.title(title_str)
+    if xlabel is not None:
+        plt.xlable(xlabel)
+    if ylabel is not None:
+        plt.ylabel(ylabel)
+    clb=plt.colorbar()    
+
+    if colorbar_label is not None:
+        clb.ax.set_title(colorbar_label)
+
+    return im1
+
+
+
+
+    
+
     
 def plot_data(ax, data, t_smp, title_str=None):
     im1=ax.plot(t_smp,data)
