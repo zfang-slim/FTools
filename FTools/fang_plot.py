@@ -115,7 +115,7 @@ def plot_model(fig, ax, data, Lateral, Depth, model_size, clim=None, title_str=N
 def imagesc(data, Lateral=None, Depth=None, clim=None, title_str=None, xlabel='None', ylabel='None',
             cmap='jet', colorbar_label=None, ax=None, fig=None):
     if ax is None:
-        im1 = plt.imshow(data, clim=clim, extent=[Lateral[0], Lateral[-1], Depth[-1], Depth[0]], interpolation='nearest', aspect='auto')
+        im1 = plt.imshow(data, clim=clim, extent=[Lateral[0], Lateral[-1], Depth[-1], Depth[0]], interpolation='nearest', aspect='auto', cmap=cmap)
         if title_str is not None:
             plt.title(title_str)
         if xlabel is not None:
@@ -127,11 +127,11 @@ def imagesc(data, Lateral=None, Depth=None, clim=None, title_str=None, xlabel='N
         if colorbar_label is not None:
             clb.ax.set_title(colorbar_label)
     else:
-        im1 = ax.imshow(data, clim=clim, extent=[Lateral[0], Lateral[-1], Depth[-1], Depth[0]], interpolation='nearest', aspect='auto')
+        im1 = ax.imshow(data, clim=clim, extent=[Lateral[0], Lateral[-1], Depth[-1], Depth[0]], interpolation='nearest', aspect='auto', cmap=cmap)
         if title_str is not None:
             ax.set_title(title_str)
         if xlabel is not None:
-            ax.set_xlable(xlabel)
+            ax.set_xlabel(xlabel)
         if ylabel is not None:
             ax.set_ylabel(ylabel)
         clb=plt.colorbar(im1, ax=ax)    
