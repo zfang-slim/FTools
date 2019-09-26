@@ -104,9 +104,10 @@ def plot_model(fig, ax, data, Lateral, Depth, model_size, clim=None, title_str=N
     ax.set_ylabel('Z [km]')
     ax.set_title(title_str)
     im1.set_cmap(cmap)
-    divider = make_axes_locatable(ax)
-    cax = divider.append_axes('right', size='5%', pad=0.05)
     if colorbarFlag is True:
+        divider = make_axes_locatable(ax)
+        cax = divider.append_axes('right', size='5%', pad=0.05)
+
         cbar = fig.colorbar(im1, cax=cax, orientation='vertical')
         if colorbar_label is not None:
             cbar.set_label(colorbar_label)
