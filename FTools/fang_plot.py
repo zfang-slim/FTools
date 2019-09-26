@@ -96,7 +96,7 @@ def create_animation(vt, vi, fwave, awave, IC, Lateral, Depth, model_size, ntime
     
     return ani
 
-def plot_model(fig, ax, data, Lateral, Depth, model_size, clim=None, title_str=None,cmap='jet',animated=False, colorbar_label=None):
+def plot_model(fig, ax, data, Lateral, Depth, model_size, clim=None, title_str=None,cmap='jet',animated=False, colorbar_label=None, colorbarFlag=True):
     im1=ax.imshow(data,
                   clim=clim,
                   extent=[Lateral[0], Lateral[-1], Depth[-1], Depth[0]], animated=animated)
@@ -106,9 +106,10 @@ def plot_model(fig, ax, data, Lateral, Depth, model_size, clim=None, title_str=N
     im1.set_cmap(cmap)
     divider = make_axes_locatable(ax)
     cax = divider.append_axes('right', size='5%', pad=0.05)
-    cbar = fig.colorbar(im1, cax=cax, orientation='vertical')
-    if colorbar_label is not None:
-        cbar.set_label(colorbar_label)
+    if colorbarFlag is True:
+        cbar = fig.colorbar(im1, cax=cax, orientation='vertical')
+        if colorbar_label is not None:
+            cbar.set_label(colorbar_label)
 
     return im1
 
