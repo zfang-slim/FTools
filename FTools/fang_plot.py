@@ -114,9 +114,15 @@ def plot_model(fig, ax, data, Lateral, Depth, model_size, clim=None, title_str=N
 
     return im1
 
-def imagesc(data, Lateral=None, Depth=None, clim=None, title_str=None, xlabel='None', ylabel='None',
+def imagesc(data, Lateral=None, Depth=None, clim=None, title_str=None, xlabel=None, ylabel=None,
             cmap='jet', colorbar=True, colorbar_label=None, ax=None, fig=None):
     if ax is None:
+        ndata = np.shape(data)
+        if Lateral is None:
+            Lateral = [0, ndata[1]]
+        if Depth is None:
+            Depth = [0, ndata[0]]
+            
         im1 = plt.imshow(data, clim=clim, extent=[Lateral[0], Lateral[-1], Depth[-1], Depth[0]], interpolation='nearest', aspect='auto', cmap=cmap)
         if title_str is not None:
             plt.title(title_str)
