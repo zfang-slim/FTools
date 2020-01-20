@@ -127,7 +127,7 @@ def imagesc(data, Lateral=None, Depth=None, clim=None, title_str=None, xlabel=No
         if title_str is not None:
             plt.title(title_str)
         if xlabel is not None:
-            plt.xlable(xlabel)
+            plt.xlabel(xlabel)
         if ylabel is not None:
             plt.ylabel(ylabel)
         if colorbar is True:
